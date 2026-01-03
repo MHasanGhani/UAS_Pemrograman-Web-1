@@ -1,0 +1,491 @@
+/* --- VARIABLE & RESET --- */
+:root {
+    --bg-color: #0a0a0a;         /* Hitam Pekat */
+    --surface-color: #1a1a1a;    /* Abu Sangat Gelap */
+    --gold: #d4af37;             /* Emas Mewah */
+    --gold-dim: #aa8c2c;
+    --text-light: #f4f4f4;
+    --text-gray: #b0b0b0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* Typography untuk kesan mahal */
+h1, h2, h3, h4, .logo {
+    font-family: 'Playfair Display', serif;
+}
+
+a { text-decoration: none; color: inherit; transition: 0.3s; }
+ul { list-style: none; }
+
+/* --- NAVIGATION --- */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background: rgba(10, 10, 10, 0.95);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #333;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.logo span { color: var(--gold); }
+
+.nav-links { display: flex; gap: 30px; }
+.nav-links a {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.nav-links a:hover { color: var(--gold); }
+
+/* --- UTILITIES --- */
+.section-padding { padding: 80px 10%; }
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: var(--gold);
+    position: relative;
+}
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--gold);
+    margin: 10px auto 0;
+}
+.dark-bg { background-color: #111; }
+
+.btn-gold {
+    padding: 12px 30px;
+    background: var(--gold);
+    color: #000;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.btn-gold:hover { background: var(--gold-dim); }
+
+.btn-gold-outline {
+    padding: 10px 28px;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    background: transparent;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.btn-gold-outline:hover { background: var(--gold); color: #000; }
+
+/* --- HERO SECTION --- */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: radial-gradient(circle at center, #1f1f1f 0%, #000 100%);
+}
+.hero h1 {
+    font-size: 4rem;
+    margin: 20px 0;
+    line-height: 1.2;
+}
+.gold-text { color: var(--gold); font-style: italic; }
+.subtitle { letter-spacing: 3px; text-transform: uppercase; font-size: 0.9rem; color: var(--gold); }
+.description { margin-bottom: 40px; color: var(--text-gray); }
+
+/* --- PROFILE --- */
+.profile-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+.profile-card, .profile-details { flex: 1; }
+.profile-card {
+    background: var(--surface-color);
+    padding: 30px;
+    border: 1px solid #333;
+    border-left: 5px solid var(--gold);
+}
+.detail-box { margin-bottom: 30px; }
+.skill-bar { margin: 15px 0; }
+.bar {
+    height: 6px;
+    background: #333;
+    margin-top: 5px;
+}
+.fill {
+    height: 100%;
+    background: var(--gold);
+}
+
+/* --- PROJECTS --- */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+.project-card {
+    background: var(--surface-color);
+    border: 1px solid #333;
+    transition: 0.3s;
+}
+.project-card:hover { transform: translateY(-10px); border-color: var(--gold); }
+.card-image {
+    height: 200px;
+    background: #2a2a2a; 
+.card-info { padding: 20px; }
+}
+/* --- MEDIA --- */
+.media-container-v2 {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; 
+    max-width: 1000px;
+    margin: 0 auto; 
+}
+/* Styling Umum Kartu Media */
+.media-card {
+    background: var(--surface-color); 
+    border: 1px solid #333;
+    padding: 25px;
+    border-radius: 8px;
+    position: relative;
+    transition: 0.3s;
+}
+
+.media-card:hover {
+    border-color: var(--gold);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.media-card h3 {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 15px;
+}
+
+/* BARIS 1: Video Wrapper */
+.video-wrapper video {
+    width: 100%;
+    border-radius: 4px;
+    display: block;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* BARIS 2: Split Row (Audio & PDF) */
+.media-row-split {
+    display: flex;
+    gap: 30px;
+}
+
+/* Agar Audio & PDF punya lebar 50:50 */
+.small-card {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Konten di tengah vertikal */
+}
+
+/* --- Styling Audio Spesifik (Agar tidak kopong) --- */
+.audio-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.audio-icon-visual {
+    font-size: 3rem;
+    color: #333;
+    background: #111;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--gold);
+}
+
+.audio-icon-visual i {
+    color: var(--gold);
+}
+
+.audio-controls {
+    flex: 1; 
+}
+
+.track-title {
+    font-size: 0.9rem;
+    color: var(--text-gray);
+    margin-bottom: 8px;
+    display: block;
+}
+
+/* --- Styling PDF Spesifik (Agar rapi) --- */
+.download-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #111;
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid #333;
+}
+
+.file-details h4 {
+    margin: 0;
+    color: var(--text-light);
+    font-size: 1rem;
+}
+.file-details span {
+    font-size: 0.8rem;
+    color: var(--text-gray);
+}
+
+.btn-gold-sm {
+    background: var(--gold);
+    color: #000;
+    padding: 8px 15px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    border-radius: 4px;
+}
+.btn-gold-sm:hover {
+    background: #fff;
+}
+
+
+@media (max-width: 768px) {
+    .media-row-split {
+        flex-direction: column;
+    }
+    .audio-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+.gallery-grid img {
+    width: 100%;     
+    height: 250px;    
+    object-fit: cover; 
+    border: 1px solid #333; 
+    border-radius: 4px; 
+    transition: transform 0.3s ease, border-color 0.3s ease; 
+    cursor: pointer;
+}
+
+
+.gallery-grid img:hover {
+    transform: scale(1.03); 
+    border-color: var(--gold); 
+    z-index: 2; 
+    box-shadow: 0 10px 20px -10px rgba(212, 175, 55, 0.3); 
+}
+
+
+/* --- INFO (PRICING & STATS) --- */
+.pricing-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px; 
+    flex-wrap: wrap;
+    margin-bottom: 80px;
+}
+
+.price-card {
+    background: var(--surface-color);
+    padding: 40px 30px;
+    text-align: center;
+    border: 1px solid #333;
+    border-radius: 8px;
+    width: 300px;
+    transition: all 0.4s ease; 
+    position: relative;
+    cursor: default;
+}
+
+.price-card h4 {
+    font-size: 1.2rem;
+    color: var(--text-gray);
+    margin-bottom: 10px;
+}
+
+.price-card h2 {
+    color: var(--gold);
+    margin: 20px 0;
+    font-size: 2.5rem;
+    transition: 0.3s;
+}
+
+.price-card p {
+    color: #999;
+    margin-bottom: 30px;
+    font-size: 0.9rem;
+}
+
+/* --- EFEK HOVER (INTERAKTIF) --- */
+.price-card:hover {
+    border-color: var(--gold); 
+    transform: translateY(-10px) scale(1.02); 
+    background: #1a1a1a; 
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.15); 
+}
+
+
+.price-card:hover .btn-gold-outline {
+    background-color: var(--gold);
+    color: #000;
+    box-shadow: 0 0 15px var(--gold); 
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding: 40px 0;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+}
+.stat-item h2 { font-size: 3rem; color: var(--gold); }
+
+/* --- CONTACT --- */
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+.contact-info, .contact-form { flex: 1; }
+.contact-info p { margin-bottom: 15px; display: flex; align-items: center; gap: 15px; }
+.contact-info i { color: var(--gold); width: 20px; }
+.social-links { margin-top: 30px; display: flex; gap: 20px; }
+.social-links i { font-size: 1.5rem; transition: 0.3s; }
+.social-links i:hover { color: var(--gold); }
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    background: var(--surface-color);
+    border: 1px solid #333;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+.contact-form input:focus, .contact-form textarea:focus {
+    outline: none;
+    border-color: var(--gold);
+}
+
+.map-container { margin-top: 50px; border: 1px solid var(--gold); }
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #000;
+    color: #555;
+    font-size: 0.8rem;
+    border-top: 1px solid #222;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .nav-links { display: none; } 
+    .hero h1 { font-size: 2.5rem; }
+    .pricing-container { flex-direction: column; align-items: center; }
+    .gallery-grid { grid-template-columns: 1fr; }
+}
+/* --- CSS UNTUK KARTU DOWNLOAD PDF --- */
+.download-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #151515; 
+    padding: 30px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    transition: 0.3s;
+    margin-top: 15px;
+}
+
+/* Efek Hover pada container */
+.download-card:hover {
+    border-color: var(--gold);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    transform: translateY(-3px);
+}
+
+/* Icon PDF Besar */
+.file-icon i {
+    font-size: 3rem;
+    color: var(--text-gray);
+    transition: 0.3s;
+}
+
+.download-card:hover .file-icon i {
+    color: var(--gold); 
+}
+
+/* Info File */
+.file-info {
+    flex: 1;
+    padding: 0 25px;
+}
+
+.file-info h4 {
+    color: var(--text-light);
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    font-family: 'Playfair Display', serif;
+
+.file-info p {
+    color: var(--text-gray);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Responsif untuk HP (agar tidak berantakan) */
+@media (max-width: 768px) {
+    .download-card {
+        flex-direction: column; 
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .file-info {
+        padding: 0;
+    }
+    
+    .btn-gold {
+        width: 100%;
+    }
+}
