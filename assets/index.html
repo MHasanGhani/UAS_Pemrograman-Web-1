@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY Portofolio | UAS Pemrograman Web</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">SANZ<span>FOLIO</span>.</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="#projects">Karya</a></li>
+            <li><a href="#media">Media</a></li>
+            <li><a href="#info">Informasi</a></li>
+            <li><a href="#contact">Kontak</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <p class="subtitle">Selamat Datang di  MY Portofolio </p>
+            <h1>MUHAMMAD HASAN <span class="gold-text">GHANI</span></h1>
+            <p class="description">Web Developer & Creative Designer</p>
+            <a href="#contact" class="btn-gold">Hubungi Saya</a>
+        </div>
+    </section>
+
+    <section id="profile" class="section-padding">
+        <h2 class="section-title">Profile Pribadi</h2>
+        <div class="profile-container">
+            <div class="profile-card">
+                <h3>Data Diri</h3>
+                <ul>
+                    <li><strong>Nama:</strong> Muhammad Hasan Ghani </li>
+                    <li><strong>NIM:</strong> 2251011700638</li>
+                    <li><strong>Kelas:</strong>01SIFP0011</li>
+                    <li><strong>Email:</strong> mhasanghani1945@gmail.com</li>
+                </ul>
+            </div>
+            <div class="profile-details">
+                <div class="detail-box">
+                    <h3>Keahlian</h3>
+                    <div class="skill-bar"><p>HTML & CSS</p><div class="bar"> <div class="fill" style="width:90%"></div></div></div>
+                    <div class="skill-bar"><p>JavaScript</p><div class="bar"> <div class="fill" style="width:75%"></div></div></div>
+                    <div class="skill-bar"><p>UI/UX Design</p><div class="bar"> <div class="fill" style="width:85%"></div></div></div>
+                </div>
+                <div class="detail-box">
+                    <h3>Pendidikan</h3>
+                    <ul class="timeline-list">
+                        <li>SMA Negeri 1 Parung (2023 - 2025)</li>
+                        <li>Universitas Pamulang  (2025 - Sekarang)</li>
+                    </ul>
+                </div>
+                <div class="detail-box">
+                    <h3>Pengalaman Kerja</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section-padding dark-bg">
+        <h2 class="section-title">Karya & Project</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <div class="card-image"></div> <div class="card-info">
+                    <h3>COMING SOON</h3>
+                    <p></p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="card-image"></div>
+                <div class="card-info">
+                    <h3>COMING SOON</h3>
+                    <p></p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="card-image"></div>
+                <div class="card-info">
+                    <h3>COMING SOON</h3>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="media" class="section-padding">
+    <h2 class="section-title">Media Galeri</h2>
+    
+    <div class="media-container-v2">
+        
+        <div class="media-row-full">
+            <div class="media-card video-card">
+                <h3><i class="fas fa-play-circle" style="color:var(--gold)"></i> Video Highlight</h3>
+                <div class="video-wrapper">
+                    <video controls>
+                        <source src="assets/video.mp4" type="video/mp4">
+                        Browser Anda tidak mendukung video.
+                    </video>
+                </div>
+            </div>
+        </div>
+
+        <div class="media-row-split">
+            
+            <div class="media-card small-card">
+                <h3><i class="fas fa-music" style="color:var(--gold)"></i> Audio Player</h3>
+                <div class="audio-content">
+                    <div class="audio-icon-visual">
+                        <i class="fas fa-compact-disc fa-spin"></i>
+                    </div>
+                    <div class="audio-controls">
+                        <p class="track-title">🎵 Cinematic Luxury Theme</p>
+                        <audio controls>
+                            <source src="assets/audio.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+                </div>
+            </div>
+
+            <div class="media-card small-card">
+                <h3><i class="fas fa-file-pdf" style="color:var(--gold)"></i> Dokumen</h3>
+                <div class="download-content">
+                    <div class="file-details">
+                        <h4>Curriculum Vitae</h4>
+                        <span>PDF - 2.5 MB</span>
+                    </div>
+                    <a href="assets/pdf.pdf" class="btn-gold-sm" download>
+                        Unduh <i class="fas fa-arrow-down"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="media-row-full gallery-section">
+            <h3>Galeri Foto</h3>
+            <div class="gallery-grid">
+                <img src="assets/image1.png" alt="Img 1">
+                <img src="assets/image2.jpg" alt="Img 2">
+                <img src="assets/image3.png" alt="Img 3">
+                <img src="assets/image4.png" alt="Img 4">
+            </div>
+        </div>
+
+    </div>
+</section>
+
+    <section id="info" class="section-padding dark-bg">
+        <h2 class="section-title">Informasi & Statistik</h2>
+        
+            <div class="pricing-container">
+    <div class="price-card">
+        <h4>Basic</h4>
+        <h2>Rp 500k</h2>
+        <p>Landing Page Sederhana</p>
+        <button class="btn-gold-outline">Pilih</button>
+    </div>
+
+    <div class="price-card"> 
+        <h4>Premium</h4>
+        <h2>Rp 1.5jt</h2>
+        <p>Web Dinamis + CMS</p>
+        <button class="btn-gold-outline">Pilih</button>
+    </div>
+
+    <div class="price-card">
+        <h4>Gold</h4>
+        <h2>Rp 3jt+</h2>
+        <p>E-Commerce Full Fitur</p>
+        <button class="btn-gold-outline">Pilih</button>
+    </div>
+    </div>
+        <div class="stats-container">
+            <div class="stat-item">
+                <h2>10+</h2>
+                <p>Proyek Selesai</p>
+            </div>
+            <div class="stat-item">
+                <h2>5+</h2>
+                <p>Klien Puas</p>
+            </div>
+            <div class="stat-item">
+                <h2>2</h2>
+                <p>Tahun Pengalaman</p>
+            </div>
+        </div>
+
+        <div class="timeline-section">
+            <h3>Timeline Perkembangan</h3>
+            <div class="timeline-box">
+                <p><strong>2023:</strong> Memulai belajar HTML & CSS.</p>
+                <p><strong>2024:</strong> Mengerjakan proyek pertama freelance.</p>
+                <p><strong>2025:</strong> Menguasai Framework JavaScript.</p>
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <h3>Pertanyaan Umum (FAQ)</h3>
+            <details>
+                <summary>Berapa lama pengerjaan website?</summary>
+                <p>Tergantung kerumitan, biasanya 1-4 minggu.</p>
+            </details>
+            <details>
+                <summary>Apakah revisi berbayar?</summary>
+                <p>Kami memberikan 2x revisi gratis minor.</p>
+            </details>
+         </div>
+    </section>
+
+    <section id="contact" class="section-padding">
+        <h2 class="section-title">Hubungi Saya</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Informasi Kontak</h3>
+                <p><i class="fas fa-map-marker-alt"></i>Jl. H Mawi Waru Jaya , parung, Bogor Jawa Barat</p>
+                <p><i class="fas fa-envelope"></i> mhasanghani1945@gmail.com</p>
+                <p><i class="fas fa-phone"></i> +6289636950947</p>
+                <p><i class="fas fa-clock"></i> Senin - Jumat: 09.00 - 17.00</p>
+                
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <form id="contactForm" class="contact-form">
+                <input type="text" placeholder="Nama Lengkap" required>
+                <input type="email" placeholder="Email Address" required>
+                <input type="text" placeholder="Subjek Pesan" required>
+                <textarea rows="5" placeholder="Pesan Anda..." required></textarea>
+                <button type="submit" class="btn-gold">Kirim Pesan</button>
+            </form>
+        </div>
+
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126920.24586950266!2d106.756209!3d-6.229728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3e945e34b9d%3A0x5371bf0fdad786a2!2sJakarta%2C%20Special%20Capital%20Region%20of%20Jakarta!5e0!3m2!1sen!2sid!4v1600000000000!5m2!1sen!2sid" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 UAS Pemrograman Web 1 - MUHAMMADHASANGHANI_01SIFP0011_251011700638. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
